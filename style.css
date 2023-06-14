@@ -33,3 +33,32 @@ h2 {
 
 h3 {font-size: 1.563rem;}
 
+#header {
+  background: #B48FFF;
+  height: 15%;
+  width: 100%;
+  position: relative;
+  margin-top: 0px;
+  z-index: 0;
+}
+
+#logoHeaderRight {
+  background: #B48FFF;
+  position: absolute;
+  z-index: 1;
+  margin-left: 15%;
+  width: 25%;
+  padding: 0px;
+  height: 70px;
+}
+
+#logoHeaderLeft {
+  background: #B48FFF ;
+  position: absolute;
+  z-index: 1;
+  margin-left: 2.5%;
+  width: 10%;
+  text-align: left;
+  z-index: 1;
+  padding: 0px;
+}
