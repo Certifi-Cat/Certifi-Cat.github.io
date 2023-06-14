@@ -1,5 +1,6 @@
-html {font-size: 112.5%;} /*18px*/
+/* Header */
 
+html {font-size: 112.5%;} /*18px*/
 body {
   background-color: #F5F5F5;
   font-family: 'Quicksand', sans-serif;
@@ -65,4 +66,17 @@ h3 {font-size: 1.563rem;}
 
 #logo {
   mix-blend-mode: multiply;
+}
+
+/* Welcome page */
+#welcomeMessage {
+  text-align: center;
+  margin-top: 25%;
+}
+
+#welcomeButton {
+  text-align: center;
+  margin-top: 40%;
+  height: 32px;
+  width: 144px;
 }
