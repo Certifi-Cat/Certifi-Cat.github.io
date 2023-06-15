@@ -66,7 +66,7 @@ button:active {
   position: relative;
   z-index: 1;
   margin-left: 8px;
-  width: 15%;
+  width: 12%;
   padding: 0px;
   height: 128px;
   text-align: center;
@@ -86,6 +86,20 @@ button:active {
 #logo {
   mix-blend-mode: multiply;
   width: 130px;
+}
+
+#webPages {
+  display: flex;
+  position: relative;
+  width: 30%;
+}
+
+#signUp {
+  width: 50%;
+}
+
+#createVerify {
+  width: 50%;
 }
 
 /* Welcome page */
