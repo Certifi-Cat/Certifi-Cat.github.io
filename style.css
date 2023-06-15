@@ -67,7 +67,7 @@ button:active {
   z-index: 1;
   margin-left: 8px;
   width: 12%;
-  padding: 0px;
+  padding-right: 50%;
   height: 128px;
   text-align: center;
 }
