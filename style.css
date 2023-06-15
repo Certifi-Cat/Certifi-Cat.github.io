@@ -14,7 +14,7 @@ p {margin-bottom: 1rem;}
 h1 {
   font-family: 'Titillium Web';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 850;
   font-size: 44px;
   line-height: 67px;
   letter-spacing: 0.04em;
@@ -41,21 +41,23 @@ h3 {font-size: 1.563rem;}
   position: relative;
   margin-top: 0px;
   z-index: 0;
+  display: flex;
 }
 
 #logoHeaderRight {
-  background: #8862D5;
-  position: absolute;
+  background: #B48FFF;
+  position: relative;
   z-index: 1;
   margin-left: 8px;
   width: 25%;
   padding: 0px;
   height: 128px;
+  text-align: center;
 }
 
 #logoHeaderLeft {
-  background: #8862D5 ;
-  position: absolute;
+  background: #B48FFF ;
+  position: relative;
   z-index: 1;
   margin-left: 8px;
   width: 64px;
@@ -71,14 +73,13 @@ h3 {font-size: 1.563rem;}
 /* Welcome page */
 #welcomeMessage {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 16%;
 }
 
 #welcomeButton {
   text-align: center;
-  margin-top: 40%;
+  margin-top: 18%;
   height: 32px;
   width: 128px;
   background-color: #8862D5;
-  
 }
