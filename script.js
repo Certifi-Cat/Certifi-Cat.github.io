@@ -23,6 +23,8 @@ function makeNFT() {
   const form = new FormData();
   form.append('allowPlatformToOperateToken', 'true');
   form.append('chain', 'goerli');
+  form.append('metadataUrl', 'SOME-LINK.com');
+  form.append('recipientAddress', 'SOME-ADDRESSTOMINTTO');
 
   const options = {
     method: 'POST',
