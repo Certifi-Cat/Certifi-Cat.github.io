@@ -8,5 +8,5 @@ function saveData() {
   var desc = document.getElementsByName('nftInfo')[1].value;
   var address = document.getElementsByName('nftInfo')[2].value;
   var blockchain = IsNullOrEmpty(document.getElementsByName('nftInfo')[3].value.trim()) ? 'goerli' : document.getElementById('inputName').toString();
-  document.cookie = "name=" + name "; " + "desc=" + desc "; " + "address=" + address "; " + "blockchain=" + blockchain "; " + "path=/"
+  document.cookie = "name=" + name "; " + "desc=" + desc "; " + "address=" + address "; " + "blockchain=" + blockchain "; " + "path=/create"
 }
