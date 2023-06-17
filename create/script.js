@@ -18,3 +18,12 @@ function verifyAccount() {
   }
   else window.location.replace("https://certifi-cat.github.io/account");
 }
+
+function saveFile() {
+  if(file type is PDF) {
+    var img = new Image();
+    img.src = pdfCanvas.toDataURL();
+  }
+  else {
+  }
+}
