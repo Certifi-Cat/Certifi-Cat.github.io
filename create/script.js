@@ -3,7 +3,7 @@ script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
 script.type = 'module';
 document.getElementsByTagName('head')[0].appendChild(script);
 
-var signedOn = false;
+var signedOn = true;
 
 function verifyCreate() {
   if(signedOn == false) {
