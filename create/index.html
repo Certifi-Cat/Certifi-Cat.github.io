@@ -32,9 +32,10 @@
       </div>
     </div>
     <h2> Step 1. </h2>
-    <h3> Upload a document. </h3>
+    <h3> Upload a PDF or image. </h3>
     /* convert to image if PDF?? */
-    <input type=
+    <form> <input id="inFile" type="file" name="inFile"> </form>
+    <button id="next" onclick="saveFile()" formaction="https://certifi-cat.github.io/create/step-2" id="nextPageButton"> ———> </button>
     <script src="script.js"></script>
   </body>
 </html>
