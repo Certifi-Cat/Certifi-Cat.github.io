@@ -7,5 +7,45 @@
     "status": "Sent"
   }
 }
-<button formaction="makeNFT()" type="submit" id="makeNftButton">CREATE</button>
+
 */
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="module" src="script.js"></script>
+    <link href="https://github.com/Certifi-Cat/Certifi-Cat.github.io/blob/main/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+    <meta charset="utf-8">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Titillium+Web&display=swap" rel="stylesheet"> 
+    
+    <title>CertifiCat</title>
+  </head>
+  
+  <body>
+    <div id="header">
+      <div id="logoHeaderLeft">
+        <a href="https://certifi-cat.github.io">
+          <img src="/graphics/CertifiCat.jpg" alt="The certificat logo" id="logo">
+        </a>
+      </div>
+      <div id="logoHeaderRight">
+        <h1  class="titleText"> CertifiCat </h1>
+      </div>
+      <div id=webpages>
+        <button formaction="verifyCreate()" type="submit" id="createVerify">CREATE</button>
+        <button formaction="/account" type="submit" id="account">ACCOUNT</button>
+      </div>
+    </div>
+    <h2> Step 3. </h2>
+    <h3> Ready? Hit submit, and your NFT will be generated. </h3>
+    <button formaction="makeNFT()" type="submit" id="makeNftButton">SUBMIT</button>
+    <script src="script.js"></script>
+  </body>
+</html>
