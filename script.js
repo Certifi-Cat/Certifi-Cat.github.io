@@ -49,7 +49,7 @@ function saveFile() {
     // Save the IDBDatabase interface
     const db = event.target.result;
     // Create an objectStore for this database
-    const objectStore = db.createObjectStore("name", { keyPath: "myKey" });
+    const objectStore = db.createObjectStore("pictures", { keyPath: dataURL.slice(0, 10) });
   };
 
   document.cookie = "image=" + dataURL "; " + "path=/create"
