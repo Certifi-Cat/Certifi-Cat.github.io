@@ -5,10 +5,10 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 var signedOn = true;
 
-document.getElementById("createVerify").addEventListener("click", verifyCreate, false);
-document.getElementById("welcomeRedirect").addEventListener("click", verifyCreate, false);
-document.getElementByName("toPage2").addEventListener("click", saveFile, false);
-document.getElementByName("toPage3").addEventListener("click", saveData, false);
+document.getElementById("createVerify").addEventListener("click", verifyCreate);
+document.getElementById("welcomeRedirect").addEventListener("click", verifyCreate);
+document.getElementByName("toPage2").addEventListener("click", saveFile);
+document.getElementByName("toPage3").addEventListener("click", saveData);
 
 
 function verifyCreate() {
