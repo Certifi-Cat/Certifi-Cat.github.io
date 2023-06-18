@@ -85,10 +85,9 @@ function getDB(imgName) {
     console.log("couldn't get uploaded image from IndexedDB");
   };
   request.onsuccess = (event) => {
-    console.log("outputted from DB: " + ${request.result});
-    return ${request.result};
+    console.log("outputted from DB: " + $(request.result));
+    return $(request.result);
   };
-
 }
 
 function makeNFT() {
