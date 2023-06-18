@@ -131,7 +131,7 @@ function makeNFT() {
 
 }
 
-displayNFT(string) {
+function displayNFT(string) {
   var vals = string.split("\"");
   document.getElementById("transactionHash").innerHTML += vals[4];
   document.getElementById("blockExplorer").innerHTML += vals[8];
