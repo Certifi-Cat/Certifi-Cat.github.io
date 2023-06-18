@@ -73,6 +73,8 @@ function saveFile() {
   req.onsuccess = (event) => {
     console.log("Successfully added an object to this database!");
   };
+
+  window.location.replace("https://certifi-cat.github.io/create/step-2");
 }
 
 function saveData() {
@@ -81,6 +83,7 @@ function saveData() {
   var address = document.getElementsByName('nftInfo')[2].value;
   var blockchain = IsNullOrEmpty(document.getElementsByName('nftInfo')[3].value.trim()) ? 'goerli' : document.getElementById('inputName').toString();
   document.cookie = "name=" + name + "; " + "desc=" + desc + "; " + "address=" + address + "; " + "blockchain=" + blockchain + "; " + "path=/create";
+  window.location.replace("https://certifi-cat.github.io/step-3");
 }
 
 function getDB(imgName) {
