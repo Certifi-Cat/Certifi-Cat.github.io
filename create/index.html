@@ -30,10 +30,12 @@
         <button formaction="/account" type="submit" id="account">ACCOUNT</button>
       </div>
     </div>
-    <h2> Step 1. </h2>
-    <h3> Upload a PDF or image. </h3>
-    <form> <input id="inFile" type="file" name="inFile"> </form>
-    <button id="next" onclick="saveFile()" formaction="https://certifi-cat.github.io/create/step-2" id="nextPageButton"> —> </button>
+    <div class="indent"> 
+      <h2> Step 1. </h2>
+      <h3> Upload a PDF or image. </h3>
+      <form> <input id="inFile" type="file" name="inFile"> </form>
+      <button id="next" onclick="saveFile()" formaction="https://certifi-cat.github.io/create/step-2" id="nextPageButton"> —> </button>
+    </div>
     <script defer content-type="application/javascript;charset=utf-8" type="module" src="../script.js"></script>
     <script defer content-type="application/javascript;charset=utf-8" src="https://cdnjs.com/libraries/pdf.js"></script>
   </body>
