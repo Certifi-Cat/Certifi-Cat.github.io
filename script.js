@@ -118,7 +118,7 @@ function makeNFT() {
     method: 'POST',
     headers: {
       accept: 'application/json',
-      'X-API-Key': ${{ secrets.VWKey }}
+      'X-API-Key': $( secrets.VWKey )
     }
   };
 
