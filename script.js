@@ -5,11 +5,18 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 var signedOn = true;
 
-document.getElementById("createVerify").addEventListener("click", verifyCreate);
-document.getElementById("welcomeRedirect").addEventListener("click", verifyCreate);
-document.getElementByName("toPage2").addEventListener("click", saveFile);
-document.getElementByName("toPage3").addEventListener("click", saveData);
-
+if(document.getElementById("createVerify") != null) {
+  document.getElementById("createVerify").addEventListener("click", verifyCreate);
+}
+if(document.getElementById("welcomeRedirect") != null) {
+  document.getElementById("welcomeRedirect").addEventListener("click", verifyCreate);
+}
+if(document.getElementById("toPage2") != null) {
+  document.getElementByName("toPage2").addEventListener("click", saveFile);
+}
+if(document.getElementById("welcomeRedirect") != null) {
+  document.getElementByName("toPage3").addEventListener("click", saveData);
+}
 
 function verifyCreate() {
   if(signedOn == false) {
