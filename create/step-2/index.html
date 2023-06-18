@@ -30,24 +30,25 @@
         <button formaction="/account" type="submit" id="account">ACCOUNT</button>
       </div>
     </div>
-    
-    <h2> Step 2. </h2>
-    <h3> Add relevant information </h2>
-    <div id="inputInfo" style="height:550px"> 
-      <p> NFT file name: </p> 
-      <input type="text" id="inputName" name="nftInfo">
-      <p> File description </p> 
-      <input type="text" id="inputDesc" name="nftInfo">
-      <p> Address to mint to: </p> 
-      <em> <p> If left empty, the NFT will be minted to the default Verbwire wallet </p> </em>
-      <input type="text" id="inputAddress" name="nftInfo">
-      <p> Blockchain </p> 
-      <em> <p> If left empty, goerli will be automatically chosen </p> </em>
-      <input type="text" id="inputBlockchain" name="nftInfo">
+
+    <div class="indent"> 
+      <h2> Step 2. </h2>
+      <h3> Add relevant information </h2>
+      <div id="inputInfo" style="height:550px"> 
+        <p> NFT file name: </p> 
+        <input type="text" id="inputName" name="nftInfo">
+        <p> File description </p> 
+        <input type="text" id="inputDesc" name="nftInfo">
+        <p> Address to mint to: </p> 
+        <em> <p> If left empty, the NFT will be minted to the default Verbwire wallet </p> </em>
+        <input type="text" id="inputAddress" name="nftInfo">
+        <p> Blockchain </p> 
+        <em> <p> If left empty, goerli will be automatically chosen </p> </em>
+        <input type="text" id="inputBlockchain" name="nftInfo">
+      </div>
     </div>
     
-    
-    <button id="next" onclick="saveData()" name="toPage3"> ———> </button>
+    <button id="next" onclick="saveData()" name="toPage3"> —> </button>
     
     <script defer content-type="application/javascript;charset=utf-8" type="module" src="../../script.js"></script>
     <!-- <script defer type="text/javascript" src="https://cdnjs.com/libraries/pdf.js"></script> -->
