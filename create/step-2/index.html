@@ -33,16 +33,19 @@
     
     <h2> Step 2. </h2>
     <h3> Add relevant information </h2>
-    <p> NFT file name: </p> 
-    <input type="text" id="inputName" name="nftInfo">
-    <p> File description </p> 
-    <input type="text" id="inputDesc" name="nftInfo">
-    <p> Address to mint to: </p> 
-    <em> <p> If left empty, the NFT will be minted to the default Verbwire wallet </p> </em>
-    <input type="text" id="inputAddress" name="nftInfo">
-    <p> Blockchain </p> 
-    <em> <p> If left empty, goerli will be automatically chosen </p> </em>
-    <input type="text" id="inputBlockchain" name="nftInfo">
+    <div id="inputInfo"> 
+      <p> NFT file name: </p> 
+      <input type="text" id="inputName" name="nftInfo">
+      <p> File description </p> 
+      <input type="text" id="inputDesc" name="nftInfo">
+      <p> Address to mint to: </p> 
+      <em> <p> If left empty, the NFT will be minted to the default Verbwire wallet </p> </em>
+      <input type="text" id="inputAddress" name="nftInfo">
+      <p> Blockchain </p> 
+      <em> <p> If left empty, goerli will be automatically chosen </p> </em>
+      <input type="text" id="inputBlockchain" name="nftInfo">
+    </div>
+    
     
     <button id="next" onclick="saveData()" formaction="https://certifi-cat.github.io/create/step-3" id="nextPageButton"> ———> </button>
     
