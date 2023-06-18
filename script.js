@@ -11,10 +11,10 @@ if(document.getElementById("createVerify") != null) {
 if(document.getElementById("welcomeRedirect") != null) {
   document.getElementById("welcomeRedirect").addEventListener("click", verifyCreate);
 }
-if(document.getElementById("toPage2") != null) {
+if(document.getElementByName("toPage2") != null) {
   document.getElementByName("toPage2").addEventListener("click", saveFile);
 }
-if(document.getElementById("welcomeRedirect") != null) {
+if(document.getElementByName("toPage3") != null) {
   document.getElementByName("toPage3").addEventListener("click", saveData);
 }
 
