@@ -62,9 +62,9 @@ function saveFile() {
   };
 
   /* Storing data */
-  const objectStore = transaction.objectStore("pictures");
-  const request = objectStore.add(dataURL);
-  request.onsuccess = (event) => {
+  const openedTransaction = transaction.objectStore("pictures");
+  const req = openedTransaction.add(dataURL);
+  req.onsuccess = (event) => {
     console.log("Successfully added an object to this database!");
   };
 }
