@@ -133,14 +133,3 @@ displayNFT(string) {
   document.getElementById("transactionID").innerHTML += vals[12];
   document.getElementById("status").innerHTML += vals[16];
 }
-
-/*
-{
-  "transaction_details": {
-    "transactionHash": "0x66bddc84383c292007900ad8b098e426924a57e0cf2e390f7550063a0bd63a30",
-    "blockExplorer": "https://goerli.etherscan.io/tx/0x66bddc84383c292007900ad8b098e426924a57e0cf2e390f7550063a0bd63a30",
-    "transactionID": "648d920ac45d837b84ecdc50",
-    "status": "Sent"
-  }
-}
-*/
