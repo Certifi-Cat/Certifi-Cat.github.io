@@ -35,8 +35,10 @@ function saveFile() {
   canvas.width = img.naturalWidth;
   ctx.drawImage(img, 0, 0);
   dataURL = canvas.toDataURL('image/jpeg');
+  document.cookie = "imgName=" + dataURL.slice(0, 10) + "; " + "path=/create";
+  console.log("Made a cookie!" + document.cookie);
 
-  const request = window.indexedDB.open("MyTestDatabase", 3);
+  const request = window.indexedDB.open("ImageDatabase", 3);
   request.onerror = (event) => {
     console.log("could not successfully upload your image");
     console.error(`Database error: ${event.target.errorCode}`);
@@ -44,15 +46,27 @@ function saveFile() {
   request.onsuccess = (event) => {
     db = event.target.result;
   };
-  // This event is only implemented in recent browsers
   request.onupgradeneeded = (event) => {
-    // Save the IDBDatabase interface
     const db = event.target.result;
-    // Create an objectStore for this database
     const objectStore = db.createObjectStore("pictures", { keyPath: dataURL.slice(0, 10) });
+    objectStore.createIndex("name", "name", { unique: true });
   };
 
-  document.cookie = "image=" + dataURL "; " + "path=/create"
+  /* Activate a transaction */
+  const transaction = db.transaction(["pictures"], "readwrite");
+  transaction.oncomplete = (event) => {
+    console.log("All done!");
+  };
+  transaction.onerror = (event) => {
+    console.log("transaction error!");
+  };
+
+  /* Storing data */
+  const objectStore = transaction.objectStore("pictures");
+  const request = objectStore.add(dataURL);
+  request.onsuccess = (event) => {
+    console.log("Successfully added an object to this database!");
+  };
 }
 
 function saveData() {
@@ -63,14 +77,29 @@ function saveData() {
   document.cookie = "name=" + name "; " + "desc=" + desc "; " + "address=" + address "; " + "blockchain=" + blockchain "; " + "path=/create";
 }
 
+function getDB(imgName) {
+  const transaction = db.transaction(["pictures"]);
+  const objectStore = transaction.objectStore("pictures");
+  const request = objectStore.get(imgName);
+  request.onerror = (event) => {
+    console.log("couldn't get uploaded image from IndexedDB");
+  };
+  request.onsuccess = (event) => {
+    console.log("outputted from DB: " + ${request.result});
+    return ${request.result};
+  };
+
+}
+
 function makeNFT() {
   const form = new FormData();
   let decodedCookie = decodeURIComponent(document.cookie);
   let ca = decodedCookie.split(';');
-  var img = /* get stuff from API database */;
-  var name = ca[0];
-  var desc = ca[1];
-  var address = ca[2];
+  var imgName = ca[0];
+  var img = getDB(imgName);
+  var name = ca[1];
+  var desc = ca[2];
+  var address = ca[3];
   var blockchain = IsNullOrEmpty(ca[4]) ? 'goerli' : ca[3];
   form.append('allowPlatformToOperateToken', 'true');
   form.append('chain', blockchain);
@@ -92,8 +121,17 @@ function makeNFT() {
   fetch('https://api.verbwire.com/v1/nft/mint/quickMintFromFile', options)
     .then(response => response.json())
     .then(response => console.log(response))
+    .then(response => displayNFT(response))
     .catch(err => console.error(err));
 
+}
+
+displayNFT(string) {
+  var vals = string.split("\"");
+  document.getElementById("transactionHash").innerHTML += vals[4];
+  document.getElementById("blockExplorer").innerHTML += vals[8];
+  document.getElementById("transactionID").innerHTML += vals[12];
+  document.getElementById("status").innerHTML += vals[16];
 }
 
 /*
