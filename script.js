@@ -104,7 +104,7 @@ function makeNFT() {
   form.append('chain', blockchain);
   form.append('name', name);
   form.append('description', desc);
-  form.append('filePath', 'data:image/jpeg;name=UploadedDoc.jpg;base64,' + img + ');';
+  form.append('filePath', 'data:image/jpeg;name=UploadedDoc.jpg;base64,' + img + ');');
   form.append('recipientAddress', 'recAd');
   form.append('data', 'data');
 
