@@ -5,6 +5,12 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 var signedOn = true;
 
+document.getElementById("createVerify").addEventListener ("click", verifyCreate, false);
+document.getElementById("welcomeRedirect").addEventListener ("click", verifyCreate, false);
+document.getElementByName("toPage2").addEventListener ("click", saveFile, false);
+document.getElementByName("toPage3").addEventListener ("click", saveData, false);
+
+
 function verifyCreate() {
   if(signedOn == false) {
     window.location.replace("https://certifi-cat.github.io/signup");
