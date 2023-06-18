@@ -34,6 +34,8 @@ h2 {
 
 h3 {font-size: 1.563rem;}
 
+/*Universal */
+
 button {
   font-size: 1.25rem;
   font-family: 'Titillium Web';
@@ -119,6 +121,11 @@ input:active {
   width: 50%;
 }
 
+.indent {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
 /* Welcome page */
 #welcomeMessage {
   text-align: center;
@@ -135,14 +142,14 @@ input:active {
 }
 
 /* Create page */
-.next {
+#next {
   outline-style: solid;
   height: 32px;
   width: 128px;
   padding: 10px;
 }
 
-.inFile {
+#inFile {
   height: 50px;
   width: 200px;
   margin-top: 50px;
