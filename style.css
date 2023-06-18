@@ -51,6 +51,23 @@ button:active {
   background-color: #8862D5;
 }
 
+input {
+  font-size: 1.25rem;
+  font-family: 'Titillium Web';
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  text-align: center;
+  background-color: #B48FFF;
+}
+
+input:hover {
+  background-color: #8862D5;
+}
+
+input:active {
+  background-color: #8862D5;
+}
+
 #header {
   background: #B48FFF;
   height: 128px;
@@ -115,4 +132,18 @@ button:active {
   background-color: #B48FFF;
   margin: 3% auto;
   display: block;
+}
+
+/* Create page */
+.next {
+  outline-style: solid;
+  height: 32px;
+  width: 128px;
+  padding: 10px;
+}
+
+.inFile {
+  height: 50px;
+  width: 200px;
+  margin-top: 50px;
 }
