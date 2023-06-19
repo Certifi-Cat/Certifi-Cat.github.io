@@ -149,7 +149,7 @@ label {
 }
 
 /* Create page */
-#next {
+.next {
   outline-style: solid;
   height: 70px;
   width: 140px;
