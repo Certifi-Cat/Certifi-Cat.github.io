@@ -37,15 +37,46 @@ function verifyAccount() {
   else window.location.replace("https://certifi-cat.github.io/account");
 }
 
+/*
+function PDFToCanvas(url) {
+    var options = { zoom: 1.0 };
+    function getPage(page) {
+        var viewport = page.getViewport(options.zoom);
+        var canvas = document.createElement('canvas');
+        var ctx = canvas.getContext('2d');
+        var renderContext = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+        canvasContainer.appendChild(canvas);
+        page.render(renderContext);
+    }
+    function getPages(pdfDoc) {
+        for(var num = 1; num <= pdfDoc.numPages; num++)
+            pdfDoc.getPage(num).then(getPage);
+    }
+    pdfjsLib.disableWorker = true;
+    pdfjsLib.getDocument(url).then(getPages);
+}
+*/
+
 function saveFile() {
   var file = document.getElementById('inFile');
   var img;
   var canvas = document.createElement('canvas');
-  
+
+  /*
+  pdfjsLib.getDocument('./my_document.pdf').then((pdf) => {
+  });
+
   if(file.value.slice(-4).localeCompare(".pdf")) {
     img = new Image();
     img.src = file.toDataURL();
   }
+  */
+  
   /* Convert inputted document to base 64 jpeg */
   let ctx = canvas.getContext('2d');
   let dataURL;
