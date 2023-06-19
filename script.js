@@ -92,11 +92,12 @@ function saveFile() {
     console.log("could not successfully upload your image");
     console.error(`Database error: ${event.target.errorCode}`);
   };
+  const db;
   request.onsuccess = (event) => {
-    const db = event.target.result;
+    db = event.target.result;
   };
   request.onupgradeneeded = (event) => {
-    const db = event.target.result;
+    db = event.target.result;
     var firstTen = '';
     if(dataURL.length > 10) {
       firstTen = dataURL.slice(0, 10);
