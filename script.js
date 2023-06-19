@@ -92,7 +92,7 @@ function saveFile() {
     console.log("could not successfully upload your image");
     console.error(`Database error: ${event.target.errorCode}`);
   };
-  const db;
+  var db;
   request.onsuccess = (event) => {
     db = event.target.result;
   };
