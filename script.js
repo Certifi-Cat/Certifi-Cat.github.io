@@ -64,7 +64,7 @@ function PDFToCanvas(url) {
 
 function saveFile() {
   var file = document.getElementById('inFile');
-  var img;
+  var img = new Image();
   var canvas = document.createElement('canvas');
 
   /*
@@ -72,7 +72,6 @@ function saveFile() {
   });
 
   if(file.value.slice(-4).localeCompare(".pdf")) {
-    img = new Image();
     img.src = file.toDataURL();
   }
   */
