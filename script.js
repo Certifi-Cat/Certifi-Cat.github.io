@@ -65,6 +65,7 @@ function PDFToCanvas(url) {
 function saveFile() {
   var file = document.getElementById('inFile');
   var img = new Image();
+  img.src = file.src;
   var canvas = document.createElement('canvas');
 
   /*
