@@ -11,11 +11,11 @@ if(document.getElementById("createVerify") != null) {
 if(document.getElementById("welcomeRedirect") != null) {
   document.getElementById("welcomeRedirect").addEventListener("click", verifyCreate);
 }
-if(document.getElementByName("toPage2") != null) {
-  document.getElementByName("toPage2").addEventListener("click", saveFile);
+if(document.getElementsByName("toPage2") != null) {
+  document.getElementsByName("toPage2").addEventListener("click", saveFile);
 }
-if(document.getElementByName("toPage3") != null) {
-  document.getElementByName("toPage3").addEventListener("click", saveData);
+if(document.getElementsByName("toPage3") != null) {
+  document.getElementsByName("toPage3").addEventListener("click", saveData);
 }
 
 function verifyCreate() {
