@@ -93,7 +93,7 @@ function saveFile() {
     console.error(`Database error: ${event.target.errorCode}`);
   };
   request.onsuccess = (event) => {
-    db = event.target.result;
+    const db = event.target.result;
   };
   request.onupgradeneeded = (event) => {
     const db = event.target.result;
