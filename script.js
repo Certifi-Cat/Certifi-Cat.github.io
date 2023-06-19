@@ -97,7 +97,12 @@ function saveFile() {
   };
   request.onupgradeneeded = (event) => {
     const db = event.target.result;
-    const objectStore = db.createObjectStore("pictures", { keyPath: dataURL.slice(0, 10) });
+    var firstTen = '';
+    if(dataURL.length > 10) {
+      firstTen = dataURL.slice(0, 10);
+    }
+    else firstTen = dataURL.slice(0, dataURL.length-1)
+    const objectStore = db.createObjectStore("pictures", {keyPath: firstTen});
     objectStore.createIndex("name", "name", { unique: true });
   };
 
