@@ -150,11 +150,9 @@ label {
 
 /* Create page */
 .next {
-  outline-style: solid;
   height: 70px;
   width: 140px;
   padding: 10px;
-  text-align: ;
   margin-left: 87.5%;
   margin-top: 120px;
 }
