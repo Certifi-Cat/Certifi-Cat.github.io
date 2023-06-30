@@ -83,22 +83,23 @@ function saveFile() {
   document.cookie = "imgName=" + dataURL.slice(0, 10) + "; " + "path=/create";
   console.log("Made a cookie!" + document.cookie);
 
-  const request = window.indexedDB.open("ImageDatabase", 3);
-  request.onerror = (event) => {
+  /* Make a database */
+  const aRequest = window.indexedDB.open("ImageDatabase", 3);
+  aRequest.onerror = (event) => {
     console.log("could not successfully upload your image");
     console.error(`Database error: ${event.target.errorCode}`);
   };
   var db;
-  request.onsuccess = (event) => {
+  aRequest.onsuccess = (event) => {
     db = event.target.result;
   };
-  request.onupgradeneeded = (event) => {
+  aRequest.onupgradeneeded = (event) => {
     db = event.target.result;
     var firstTen = '';
     if(dataURL.length > 10) {
       firstTen = dataURL.slice(0, 10);
     }
-    else firstTen = dataURL.slice(0, dataURL.length-1)
+    else firstTen = dataURL.slice(0, dataURL.length-1)                           o 
     const objectStore = db.createObjectStore("pictures", {keyPath: firstTen});
     objectStore.createIndex("name", "name", { unique: true });
   };
@@ -114,8 +115,8 @@ function saveFile() {
 
   /* Storing data */
   const openedTransaction = transaction.objectStore("pictures");
-  const req = openedTransaction.add(dataURL);
-  req.onsuccess = (event) => {
+  const bRequest = openedTransaction.add(dataURL);
+  bRequest.onsuccess = (event) => {
     console.log("Successfully added an object to this database!");
   };
 
