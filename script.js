@@ -37,7 +37,7 @@ function verifyAccount() {
   else window.location.replace("https://certifi-cat.github.io/account");
 }
 
-function PDFToCanvas(url) {
+require(['url'], function PDFToCanvas(url) {
     var options = { zoom: 1.0 };
     function getPage(page) {
         var viewport = page.getViewport(options.zoom);
@@ -58,9 +58,9 @@ function PDFToCanvas(url) {
     }
     pdfjsLib.disableWorker = true;
     pdfjsLib.getDocument(url).then(getPages);
-}
+});
 
-function saveFile() {
+require([''], function saveFile() {
   var file = document.getElementById('inFile');
   var img = new Image();
   img.src = file.src;
@@ -73,7 +73,6 @@ function saveFile() {
     img.src = file.toDataURL();
   }
 
-  
   /* Convert inputted document to base 64 jpeg */
   let ctx = canvas.getContext('2d');
   let dataURL;
@@ -122,7 +121,7 @@ function saveFile() {
   };
 
   window.location.replace("https://certifi-cat.github.io/create/step-2");
-}
+});
 
 function saveData() {
   var name = document.getElementsByName('nftInfo')[0].value;
