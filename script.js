@@ -6,7 +6,6 @@ script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.7.107/pdf.worker.e
 script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.7.107/pdf.worker.min.js';
 script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.7.107/pdf_viewer.min.js';
 document.getElementsByTagName('head')[0].appendChild(script);
-const pdfjs = require('pdfjs-dist');
 
 var signedOn = true;
 
