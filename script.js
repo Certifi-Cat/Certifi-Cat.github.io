@@ -10,6 +10,10 @@ const pdfjs = require('pdfjs-dist');
 
 var signedOn = true;
 
+$('#uploadTrigger').click(function(){
+  $('#upload').click();
+  });
+
 if(document.getElementById("createVerify") != null) {
   document.getElementById("createVerify").addEventListener("click", verifyCreate);
 }
