@@ -100,7 +100,7 @@ function saveFile() {
     if(dataURL.length > 10) {
       firstTen = dataURL.slice(0, 10);
     }
-    else firstTen = dataURL.slice(0, dataURL.length-1)                           o 
+    else firstTen = dataURL.slice(0, dataURL.length-1);
     const objectStore = db.createObjectStore("pictures", {keyPath: firstTen});
     objectStore.createIndex("name", "name", { unique: true });
   };
