@@ -61,20 +61,6 @@ input {
   text-align: center;
 }
 
-input[type=file] {
-  background-color: #B48FFF;
-  height: 35px;
-  width: 140px;
-}
-
-input[type=file]:hover {
-  background-color: #8862D5;
-}
-
-input[type=file]:active {
-  background-color: #8862D5;
-}
-
 label {
   font-style: italic;
 }
@@ -159,9 +145,13 @@ label {
   margin-top: 120px;
 }
 
-#inFile {
-  height: 80px;
-  width: 100%;
+#upload {
+  display: none;
+}
+
+#uploadButton {
+  height: 70px;
+  width: 140px;
   margin-top: 50px;
 }
 
