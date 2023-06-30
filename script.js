@@ -37,7 +37,7 @@ function verifyAccount() {
   else window.location.replace("https://certifi-cat.github.io/account");
 }
 
-require(['url'], function PDFToCanvas(url) {
+require(['url', 'pdfjsLib'], function PDFToCanvas(url) {
     var options = { zoom: 1.0 };
     function getPage(page) {
         var viewport = page.getViewport(options.zoom);
@@ -60,7 +60,7 @@ require(['url'], function PDFToCanvas(url) {
     pdfjsLib.getDocument(url).then(getPages);
 });
 
-require([''], function saveFile() {
+require(['pdfjsLib'], function saveFile() {
   var file = document.getElementById('inFile');
   var img = new Image();
   img.src = file.src;
