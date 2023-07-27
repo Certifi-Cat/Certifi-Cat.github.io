@@ -1,4 +1,4 @@
-.container {
+.home-container {
   width: 100%;
   display: flex;
   overflow: auto;
@@ -7,11 +7,11 @@
   flex-direction: column;
   background-color: #fafafa;
 }
-.text {
+.home-text {
   color: #222222;;
   margin-top: var(--dl-space-space-twounits);
 }
-.container01 {
+.home-container01 {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
@@ -23,14 +23,14 @@
   padding-bottom: var(--dl-space-space-unit);
   justify-content: center;
 }
-.container02 {
+.home-container02 {
   display: flex;
   z-index: 200;
   align-items: flex-start;
   border-width: 0px;
   justify-content: center;
 }
-.container03 {
+.home-container03 {
   flex: 0 0 auto;
   width: 200px;
   display: flex;
@@ -38,11 +38,11 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.text01 {
+.home-text01 {
   color: #222222;;
   line-height: 1.425;
 }
-.container04 {
+.home-container04 {
   width: 64px;
   height: 484px;
   display: flex;
@@ -50,85 +50,85 @@
   margin-right: 4%;
   flex-direction: column;
 }
-.text50 {
+.home-text50 {
   align-self: center;
 }
-.code-embed {
+.home-code-embed {
   align-self: center;
 }
-.code-embed002 {
+.home-code-embed002 {
   align-self: center;
 }
-.code-embed004 {
+.home-code-embed004 {
   align-self: center;
 }
-.code-embed006 {
+.home-code-embed006 {
   align-self: center;
 }
-.code-embed008 {
+.home-code-embed008 {
   align-self: center;
 }
-.code-embed010 {
+.home-code-embed010 {
   align-self: center;
 }
-.code-embed012 {
+.home-code-embed012 {
   align-self: center;
 }
-.code-embed014 {
+.home-code-embed014 {
   align-self: center;
 }
-.code-embed016 {
+.home-code-embed016 {
   align-self: center;
 }
-.code-embed018 {
+.home-code-embed018 {
   align-self: center;
 }
-.code-embed020 {
+.home-code-embed020 {
   align-self: center;
 }
-.code-embed022 {
+.home-code-embed022 {
   align-self: center;
 }
-.code-embed024 {
+.home-code-embed024 {
   align-self: center;
 }
-.code-embed026 {
+.home-code-embed026 {
   align-self: center;
 }
-.code-embed028 {
+.home-code-embed028 {
   align-self: center;
 }
-.code-embed030 {
+.home-code-embed030 {
   align-self: center;
 }
-.code-embed032 {
+.home-code-embed032 {
   align-self: center;
 }
-.code-embed034 {
+.home-code-embed034 {
   align-self: center;
 }
-.code-embed036 {
+.home-code-embed036 {
   align-self: center;
 }
-.code-embed038 {
+.home-code-embed038 {
   align-self: center;
 }
-.code-embed040 {
+.home-code-embed040 {
   align-self: center;
 }
-.code-embed042 {
+.home-code-embed042 {
   align-self: center;
 }
-.code-embed044 {
+.home-code-embed044 {
   align-self: center;
 }
-.code-embed046 {
+.home-code-embed046 {
   align-self: center;
 }
-.code-embed048 {
+.home-code-embed048 {
   align-self: center;
 }
-.container05 {
+.home-container05 {
   width: 64px;
   height: 484px;
   display: flex;
@@ -136,85 +136,85 @@
   margin-right: 4%;
   flex-direction: column;
 }
-.text51 {
+.home-text51 {
   align-self: center;
 }
-.code-embed050 {
+.home-code-embed050 {
   align-self: center;
 }
-.code-embed052 {
+.home-code-embed052 {
   align-self: center;
 }
-.code-embed054 {
+.home-code-embed054 {
   align-self: center;
 }
-.code-embed056 {
+.home-code-embed056 {
   align-self: center;
 }
-.code-embed058 {
+.home-code-embed058 {
   align-self: center;
 }
-.code-embed060 {
+.home-code-embed060 {
   align-self: center;
 }
-.code-embed062 {
+.home-code-embed062 {
   align-self: center;
 }
-.code-embed064 {
+.home-code-embed064 {
   align-self: center;
 }
-.code-embed066 {
+.home-code-embed066 {
   align-self: center;
 }
-.code-embed068 {
+.home-code-embed068 {
   align-self: center;
 }
-.code-embed070 {
+.home-code-embed070 {
   align-self: center;
 }
-.code-embed072 {
+.home-code-embed072 {
   align-self: center;
 }
-.code-embed074 {
+.home-code-embed074 {
   align-self: center;
 }
-.code-embed076 {
+.home-code-embed076 {
   align-self: center;
 }
-.code-embed078 {
+.home-code-embed078 {
   align-self: center;
 }
-.code-embed080 {
+.home-code-embed080 {
   align-self: center;
 }
-.code-embed082 {
+.home-code-embed082 {
   align-self: center;
 }
-.code-embed084 {
+.home-code-embed084 {
   align-self: center;
 }
-.code-embed086 {
+.home-code-embed086 {
   align-self: center;
 }
-.code-embed088 {
+.home-code-embed088 {
   align-self: center;
 }
-.code-embed090 {
+.home-code-embed090 {
   align-self: center;
 }
-.code-embed092 {
+.home-code-embed092 {
   align-self: center;
 }
-.code-embed094 {
+.home-code-embed094 {
   align-self: center;
 }
-.code-embed096 {
+.home-code-embed096 {
   align-self: center;
 }
-.code-embed098 {
+.home-code-embed098 {
   align-self: center;
 }
-.container06 {
+.home-container06 {
   width: 64px;
   height: 484px;
   display: flex;
@@ -222,85 +222,85 @@
   margin-right: 4%;
   flex-direction: column;
 }
-.text52 {
+.home-text52 {
   align-self: center;
 }
-.code-embed100 {
+.home-code-embed100 {
   align-self: center;
 }
-.code-embed102 {
+.home-code-embed102 {
   align-self: center;
 }
-.code-embed104 {
+.home-code-embed104 {
   align-self: center;
 }
-.code-embed106 {
+.home-code-embed106 {
   align-self: center;
 }
-.code-embed108 {
+.home-code-embed108 {
   align-self: center;
 }
-.code-embed110 {
+.home-code-embed110 {
   align-self: center;
 }
-.code-embed112 {
+.home-code-embed112 {
   align-self: center;
 }
-.code-embed114 {
+.home-code-embed114 {
   align-self: center;
 }
-.code-embed116 {
+.home-code-embed116 {
   align-self: center;
 }
-.code-embed118 {
+.home-code-embed118 {
   align-self: center;
 }
-.code-embed120 {
+.home-code-embed120 {
   align-self: center;
 }
-.code-embed122 {
+.home-code-embed122 {
   align-self: center;
 }
-.code-embed124 {
+.home-code-embed124 {
   align-self: center;
 }
-.code-embed126 {
+.home-code-embed126 {
   align-self: center;
 }
-.code-embed128 {
+.home-code-embed128 {
   align-self: center;
 }
-.code-embed130 {
+.home-code-embed130 {
   align-self: center;
 }
-.code-embed132 {
+.home-code-embed132 {
   align-self: center;
 }
-.code-embed134 {
+.home-code-embed134 {
   align-self: center;
 }
-.code-embed136 {
+.home-code-embed136 {
   align-self: center;
 }
-.code-embed138 {
+.home-code-embed138 {
   align-self: center;
 }
-.code-embed140 {
+.home-code-embed140 {
   align-self: center;
 }
-.code-embed142 {
+.home-code-embed142 {
   align-self: center;
 }
-.code-embed144 {
+.home-code-embed144 {
   align-self: center;
 }
-.code-embed146 {
+.home-code-embed146 {
   align-self: center;
 }
-.code-embed148 {
+.home-code-embed148 {
   align-self: center;
 }
-.container07 {
+.home-container07 {
   width: 64px;
   height: 484px;
   display: flex;
@@ -308,85 +308,85 @@
   margin-right: 4%;
   flex-direction: column;
 }
-.text53 {
+.home-text53 {
   align-self: center;
 }
-.code-embed150 {
+.home-code-embed150 {
   align-self: center;
 }
-.code-embed152 {
+.home-code-embed152 {
   align-self: center;
 }
-.code-embed154 {
+.home-code-embed154 {
   align-self: center;
 }
-.code-embed156 {
+.home-code-embed156 {
   align-self: center;
 }
-.code-embed158 {
+.home-code-embed158 {
   align-self: center;
 }
-.code-embed160 {
+.home-code-embed160 {
   align-self: center;
 }
-.code-embed162 {
+.home-code-embed162 {
   align-self: center;
 }
-.code-embed164 {
+.home-code-embed164 {
   align-self: center;
 }
-.code-embed166 {
+.home-code-embed166 {
   align-self: center;
 }
-.code-embed168 {
+.home-code-embed168 {
   align-self: center;
 }
-.code-embed170 {
+.home-code-embed170 {
   align-self: center;
 }
-.code-embed172 {
+.home-code-embed172 {
   align-self: center;
 }
-.code-embed174 {
+.home-code-embed174 {
   align-self: center;
 }
-.code-embed176 {
+.home-code-embed176 {
   align-self: center;
 }
-.code-embed178 {
+.home-code-embed178 {
   align-self: center;
 }
-.code-embed180 {
+.home-code-embed180 {
   align-self: center;
 }
-.code-embed182 {
+.home-code-embed182 {
   align-self: center;
 }
-.code-embed184 {
+.home-code-embed184 {
   align-self: center;
 }
-.code-embed186 {
+.home-code-embed186 {
   align-self: center;
 }
-.code-embed188 {
+.home-code-embed188 {
   align-self: center;
 }
-.code-embed190 {
+.home-code-embed190 {
   align-self: center;
 }
-.code-embed192 {
+.home-code-embed192 {
   align-self: center;
 }
-.code-embed194 {
+.home-code-embed194 {
   align-self: center;
 }
-.code-embed196 {
+.home-code-embed196 {
   align-self: center;
 }
-.code-embed198 {
+.home-code-embed198 {
   align-self: center;
 }
-.container08 {
+.home-container08 {
   width: 64px;
   height: 484px;
   display: flex;
@@ -394,85 +394,85 @@
   margin-right: 4%;
   flex-direction: column;
 }
-.text54 {
+.home-text54 {
   align-self: center;
 }
-.code-embed200 {
+.home-code-embed200 {
   align-self: center;
 }
-.code-embed202 {
+.home-code-embed202 {
   align-self: center;
 }
-.code-embed204 {
+.home-code-embed204 {
   align-self: center;
 }
-.code-embed206 {
+.home-code-embed206 {
   align-self: center;
 }
-.code-embed208 {
+.home-code-embed208 {
   align-self: center;
 }
-.code-embed210 {
+.home-code-embed210 {
   align-self: center;
 }
-.code-embed212 {
+.home-code-embed212 {
   align-self: center;
 }
-.code-embed214 {
+.home-code-embed214 {
   align-self: center;
 }
-.code-embed216 {
+.home-code-embed216 {
   align-self: center;
 }
-.code-embed218 {
+.home-code-embed218 {
   align-self: center;
 }
-.code-embed220 {
+.home-code-embed220 {
   align-self: center;
 }
-.code-embed222 {
+.home-code-embed222 {
   align-self: center;
 }
-.code-embed224 {
+.home-code-embed224 {
   align-self: center;
 }
-.code-embed226 {
+.home-code-embed226 {
   align-self: center;
 }
-.code-embed228 {
+.home-code-embed228 {
   align-self: center;
 }
-.code-embed230 {
+.home-code-embed230 {
   align-self: center;
 }
-.code-embed232 {
+.home-code-embed232 {
   align-self: center;
 }
-.code-embed234 {
+.home-code-embed234 {
   align-self: center;
 }
-.code-embed236 {
+.home-code-embed236 {
   align-self: center;
 }
-.code-embed238 {
+.home-code-embed238 {
   align-self: center;
 }
-.code-embed240 {
+.home-code-embed240 {
   align-self: center;
 }
-.code-embed242 {
+.home-code-embed242 {
   align-self: center;
 }
-.code-embed244 {
+.home-code-embed244 {
   align-self: center;
 }
-.code-embed246 {
+.home-code-embed246 {
   align-self: center;
 }
-.code-embed248 {
+.home-code-embed248 {
   align-self: center;
 }
-.container09 {
+.home-container09 {
   width: 64px;
   height: 484px;
   display: flex;
@@ -480,85 +480,85 @@
   margin-right: 4%;
   flex-direction: column;
 }
-.text55 {
+.home-text55 {
   align-self: center;
 }
-.code-embed250 {
+.home-code-embed250 {
   align-self: center;
 }
-.code-embed252 {
+.home-code-embed252 {
   align-self: center;
 }
-.code-embed254 {
+.home-code-embed254 {
   align-self: center;
 }
-.code-embed256 {
+.home-code-embed256 {
   align-self: center;
 }
-.code-embed258 {
+.home-code-embed258 {
   align-self: center;
 }
-.code-embed260 {
+.home-code-embed260 {
   align-self: center;
 }
-.code-embed262 {
+.home-code-embed262 {
   align-self: center;
 }
-.code-embed264 {
+.home-code-embed264 {
   align-self: center;
 }
-.code-embed266 {
+.home-code-embed266 {
   align-self: center;
 }
-.code-embed268 {
+.home-code-embed268 {
   align-self: center;
 }
-.code-embed270 {
+.home-code-embed270 {
   align-self: center;
 }
-.code-embed272 {
+.home-code-embed272 {
   align-self: center;
 }
-.code-embed274 {
+.home-code-embed274 {
   align-self: center;
 }
-.code-embed276 {
+.home-code-embed276 {
   align-self: center;
 }
-.code-embed278 {
+.home-code-embed278 {
   align-self: center;
 }
-.code-embed280 {
+.home-code-embed280 {
   align-self: center;
 }
-.code-embed282 {
+.home-code-embed282 {
   align-self: center;
 }
-.code-embed284 {
+.home-code-embed284 {
   align-self: center;
 }
-.code-embed286 {
+.home-code-embed286 {
   align-self: center;
 }
-.code-embed288 {
+.home-code-embed288 {
   align-self: center;
 }
-.code-embed290 {
+.home-code-embed290 {
   align-self: center;
 }
-.code-embed292 {
+.home-code-embed292 {
   align-self: center;
 }
-.code-embed294 {
+.home-code-embed294 {
   align-self: center;
 }
-.code-embed296 {
+.home-code-embed296 {
   align-self: center;
 }
-.code-embed298 {
+.home-code-embed298 {
   align-self: center;
 }
-.container10 {
+.home-container10 {
   width: 64px;
   height: 484px;
   display: flex;
@@ -566,85 +566,85 @@
   margin-right: 4%;
   flex-direction: column;
 }
-.text56 {
+.home-text56 {
   align-self: center;
 }
-.code-embed300 {
+.home-code-embed300 {
   align-self: center;
 }
-.code-embed302 {
+.home-code-embed302 {
   align-self: center;
 }
-.code-embed304 {
+.home-code-embed304 {
   align-self: center;
 }
-.code-embed306 {
+.home-code-embed306 {
   align-self: center;
 }
-.code-embed308 {
+.home-code-embed308 {
   align-self: center;
 }
-.code-embed310 {
+.home-code-embed310 {
   align-self: center;
 }
-.code-embed312 {
+.home-code-embed312 {
   align-self: center;
 }
-.code-embed314 {
+.home-code-embed314 {
   align-self: center;
 }
-.code-embed316 {
+.home-code-embed316 {
   align-self: center;
 }
-.code-embed318 {
+.home-code-embed318 {
   align-self: center;
 }
-.code-embed320 {
+.home-code-embed320 {
   align-self: center;
 }
-.code-embed322 {
+.home-code-embed322 {
   align-self: center;
 }
-.code-embed324 {
+.home-code-embed324 {
   align-self: center;
 }
-.code-embed326 {
+.home-code-embed326 {
   align-self: center;
 }
-.code-embed328 {
+.home-code-embed328 {
   align-self: center;
 }
-.code-embed330 {
+.home-code-embed330 {
   align-self: center;
 }
-.code-embed332 {
+.home-code-embed332 {
   align-self: center;
 }
-.code-embed334 {
+.home-code-embed334 {
   align-self: center;
 }
-.code-embed336 {
+.home-code-embed336 {
   align-self: center;
 }
-.code-embed338 {
+.home-code-embed338 {
   align-self: center;
 }
-.code-embed340 {
+.home-code-embed340 {
   align-self: center;
 }
-.code-embed342 {
+.home-code-embed342 {
   align-self: center;
 }
-.code-embed344 {
+.home-code-embed344 {
   align-self: center;
 }
-.code-embed346 {
+.home-code-embed346 {
   align-self: center;
 }
-.code-embed348 {
+.home-code-embed348 {
   align-self: center;
 }
-.container11 {
+.home-container11 {
   flex: 0 0 auto;
   width: 100%;
   height: 100px;
@@ -654,40 +654,40 @@
   margin-top: 25px;
   align-items: flex-start;
 }
-.container12 {
+.home-container12 {
   position: relative;
 }
-.container13 {
+.home-container13 {
   position: relative;
 }
-.container14 {
+.home-container14 {
   position: relative;
 }
-.container15 {
+.home-container15 {
   position: relative;
 }
-.container16 {
+.home-container16 {
   position: relative;
 }
-.container17 {
+.home-container17 {
   position: relative;
 }
-.container18 {
+.home-container18 {
   position: relative;
 }
-.container19 {
+.home-container19 {
   position: relative;
 }
-.container20 {
+.home-container20 {
   position: relative;
 }
-.container21 {
+.home-container21 {
   position: relative;
 }
-.container22 {
+.home-container22 {
   position: relative;
 }
-.container23 {
+.home-container23 {
   gap: var(--dl-space-space-fourunits);
   flex: 0 0 auto;
   width: 50%;
@@ -698,6 +698,6 @@
   align-items: flex-start;
   justify-content: center;
 }
-.button {
+.home-button {
   color: #fafafa;
 }
