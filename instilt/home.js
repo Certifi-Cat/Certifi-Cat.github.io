@@ -6,6 +6,45 @@ import Component from './component'
 import projectStyles from '.style.module.css'
 import styles from './home.module.css'
 
+if(document.getElementById('create') != null) {
+    document.getElementById("create").addEventListener("click", redirectCreateEvent);
+}
+if(document.getElementById('submit') != null) {
+    document.getElementById("submit").addEventListener("click", submitTimes);
+}
+if(document.getElementById('submitEvent') != null) {
+    document.getElementById("submitEvent").addEventListener("click", createEvent);
+    window.location.replace("https://certifi-cat.github.io/instilt/UNIQUE-EVENT-ID-HERE");
+}
+
+function redirectCreateEvent() {
+    window.location.replace("https://certifi-cat.github.io/instilt/create.html");
+}
+
+function createEvent() {
+    eventName = document.getElementById('inputName').value
+    eventData = document.getElementById('inputData').value
+}
+
+// wait: create this array in firebase!
+var availability = [];
+for (let i = 0; i < 7; i++) {
+    arr.push(new Array(m).fill(0));
+}
+function submitTimes() {
+    var cols = document.getElementById('home-container-columns'),
+    var weekdays = cols.childNodes;
+    var hours;
+    for (var i=0; i < weekdays.length; i++) {
+        hours = weekdays.childNodes;
+        for(var j = 0; j < hours.length; j++) {
+            // access firebase array here to +1
+        }
+        divChildren[i].style.width = null;
+        divChildren[i].style.textAlign = null;
+    }
+}
+
 $(document).ready(function() {
     var $box = $('.time-box').mousedown(function() {
         $(this).toggleClass('time-box-highlight');
