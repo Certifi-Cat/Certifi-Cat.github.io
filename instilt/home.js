@@ -7,35 +7,28 @@ import projectStyles from '.style.module.css'
 import styles from './home.module.css'
 
 /* firebase */
+// Import the functions you need from the SDKs you need
 
-import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
 
-// TODO: Replace the following with your app's Firebase project configuration
-// See: https://firebase.google.com/docs/web/learn-more#config-object
+const firebaseConfig = {
+    apiKey: $( secrets.FBKey ),
+    authDomain: "testdatabase-648ea.firebaseapp.com",
+    databaseURL: "https://testdatabase-648ea-default-rtdb.firebaseio.com",
+    projectId: "testdatabase-648ea",
+    storageBucket: "testdatabase-648ea.appspot.com",
+    messagingSenderId: $( secrets.FBmessagingSenderID ),
+    appId: $( secrets.FBappID ),
+    databaseURL: "https://testdatabase-648ea-default-rtdb.firebaseio.com",
+    measurementId: "G-HGS1508WKH"
+};
 
-  // Import the functions you need from the SDKs you need
-
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
-
-    const firebaseConfig = {
-        apiKey: $( secrets.FBKey ),
-        authDomain: "testdatabase-648ea.firebaseapp.com",
-        databaseURL: "https://testdatabase-648ea-default-rtdb.firebaseio.com",
-        projectId: "testdatabase-648ea",
-        storageBucket: "testdatabase-648ea.appspot.com",
-        messagingSenderId: $( secrets.FBmessagingSenderID ),
-        appId: $( secrets.FBappID ),
-        databaseURL: "https://testdatabase-648ea-default-rtdb.firebaseio.com",
-        measurementId: "G-HGS1508WKH"
-    };
-
-  // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 /* button functionality */
 if(document.getElementById('create') != null) {document.getElementById("create").addEventListener("click", redirectCreateEvent);
