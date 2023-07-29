@@ -126,6 +126,9 @@
 .time-box:active {
   background-color: #700000;
 }
+.time-box-highlight {
+  background-color: #700000;
+}
 .Content {
   font-size: 14px;
   font-family: Montserrat;
