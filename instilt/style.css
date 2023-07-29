@@ -120,7 +120,10 @@
 .box-bottom {
   border-radius: 0px 0px 5px 5px;
 }
-.time-box\:hover {
+.time-box:hover {
+  background-color: #700000;
+}
+.time-box:active {
   background-color: #700000;
 }
 .Content {
