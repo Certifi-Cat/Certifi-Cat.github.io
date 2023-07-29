@@ -87,8 +87,18 @@
   opacity: 50%;
   background-color: #dc3545;
 }
-
-
+.time-box:hover {
+  background-color: #700000;
+  opacity: 100%;
+}
+.time-box:active {
+  background-color: #700000;
+  opacity: 100%;
+}
+.time-box-highlight {
+  background-color: #700000;
+  opacity: 100%;
+}
 .top-time-box {
   margin-top: 16%;
   border-radius: 5px 5px 0px 0px;
@@ -99,7 +109,6 @@
 .label-weekdays {
   margin-top: 12%;
 }
-
 .colored-row-red {
   width: 55.8%;
   height: 20px;
@@ -119,15 +128,6 @@
 }
 .box-bottom {
   border-radius: 0px 0px 5px 5px;
-}
-.time-box:hover {
-  background-color: #700000;
-}
-.time-box:active {
-  background-color: #700000;
-}
-.time-box-highlight {
-  background-color: #700000;
 }
 .Content {
   font-size: 14px;
