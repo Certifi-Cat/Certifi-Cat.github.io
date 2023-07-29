@@ -6,6 +6,20 @@ import Component from './component'
 import projectStyles from '.style.module.css'
 import styles from './home.module.css'
 
+$(document).ready(function() {
+    var $box = $('.time-box').mousedown(function() {
+        $(this).toggleClass('time-box-highlight');
+        var flag = $(this).hasClass('time-box-highlight')
+        $box.on('mouseenter.highlight', function() {
+            $(this).toggleClass('time-box-highlight', flag);
+        });
+    });
+    $(document).mouseup(function () {
+        $box.off('mouseenter.highlight')
+    })
+});
+
+/*
 const Home = (props) => {
   return (
     <div className={styles['container']}>
@@ -1011,3 +1025,4 @@ const Home = (props) => {
 }
 
 export default Home
+*/
