@@ -14,7 +14,7 @@ $(document).ready(function() {
             $(this).toggleClass('time-box-highlight', flag);
         });
     });
-    $(document).mouseup(function () {
+    $(document).mouseup(function() {
         $box.off('mouseenter.highlight')
     })
 });
