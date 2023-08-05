@@ -62,11 +62,12 @@ function submitTimes() {
             }
             if(getComputedStyle(divArray[i]).getPropertyValue(background-color) == red && (prev == pink || i == 0) {
                 day = getDay(i);
-                startTimes.append(i);
+                myObj[day]["startTime"] = i;
                 
             }
             else if(curr == pink && (prev == red || i == 23) {
-                endTimes.append(i);
+                day = getDay(i);
+                myObj[day]["endTime"] = i;
             }
     }
     }
