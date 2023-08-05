@@ -1,1 +1,12 @@
-
+{
+ "name": "name of person"
+ "sunday": [ 
+   {"startTime": hour,
+     "endTime": hour },
+   {"startTime": hour,
+     "endTime": hour },
+   {...}]
+ "monday": [...]
+ "tuesday": [...]
+  ...
+}
