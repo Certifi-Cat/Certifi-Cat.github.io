@@ -44,17 +44,15 @@ function redirectCreateEvent() {window.location.replace("https://certifi-cat.git
 function createEvent() {eventName = document.getElementById('inputName').valueeventData = document.getElementById('inputData').value
 }
 
-function submitTimes() {var cols = document.getElementById('home-container-columns'),var weekdays = cols.childNodes;var hours;for (var i=0; i < weekdays.length; i++) {    hours = weekdays.childNodes;    for(var j = 0; j < hours.length; j++) {        // access firebase array here to +1    }    divChildren[i].style.width = null;    divChildren[i].style.textAlign = null;}
-}
-
 $(document).ready(function() {var $box = $('.time-box').mousedown(function() {    $(this).toggleClass('time-box-highlight');    var flag = $(this).hasClass('time-box-highlight')    $box.on('mouseenter.highlight', function() {        $(this).toggleClass('time-box-highlight', flag);    });});$(document).mouseup(function() {    $box.off('mouseenter.highlight')})
 });
 
-function addAvailability() {
+function submitTimes() {
     var na = document.getElementById("person-name").value
     let myObj = {name: na};
     fetch('./availability.json').then(response => times = response.json())
     var cols = document.getElementById('home-container-columns');
+    var day;
     for(int j = 0; j < cols.length; j++) {
         var divArray = cols.ChildNodes;
         for(int i = 0; i < divArray.length; i++) {
@@ -63,6 +61,7 @@ function addAvailability() {
                 prev = window.getComputedStyle(divArray[i-1]).getPropertyValue(‘background-color’);
             }
             if(getComputedStyle(divArray[i]).getPropertyValue(background-color) == red && (prev == pink || i == 0) {
+                day = getDay(i);
                 startTimes.append(i);
                 
             }
@@ -70,6 +69,25 @@ function addAvailability() {
                 endTimes.append(i);
             }
     }
+    }
+}
+
+function getDay(num) {
+    switch (num) {
+        case 0:
+            return 'Sunday';
+        case 1:
+            return 'Monday';
+        case 2:
+            return 'Tuesday';
+        case 3:
+            return 'Wednesday';
+        case 4:
+            return 'Thursday';
+        case 5:
+            return 'Friday';
+        case 6:
+            return 'Saturday';
     }
 }
 
