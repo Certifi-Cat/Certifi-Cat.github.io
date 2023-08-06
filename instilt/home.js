@@ -49,10 +49,11 @@ $(document).ready(function() {var $box = $('.time-box').mousedown(function() {  
 
 function submitTimes() {
     var na = document.getElementById("person-name").value
-    let myObj = {name: na};
+    let myObj = {name: na, Sunday: [], Monday: [], Tuesday: [], Wednesday: [], Thursday: [], Friday: [], Saturday: []};
     fetch('./availability.json').then(response => times = response.json())
     var cols = document.getElementById('home-container-columns');
     var day;
+    var tempObj = {startTime: null, endTime: null};
     for(int j = 0; j < cols.length; j++) {
         var divArray = cols.ChildNodes;
         for(int i = 0; i < divArray.length; i++) {
@@ -60,17 +61,18 @@ function submitTimes() {
             if(i > 0) {
                 prev = window.getComputedStyle(divArray[i-1]).getPropertyValue(‘background-color’);
             }
-            if(getComputedStyle(divArray[i]).getPropertyValue(background-color) == red && (prev == pink || i == 0) {
-                day = getDay(i);
-                myObj[day]["startTime"] = i;
+            if(getComputedStyle(divArray[i]).getPropertyValue(background-color) == "#700000" && (prev == "#dc3545" || i == 0)) {
+                tempObj["startTime"] = i;
                 
             }
-            else if(curr == pink && (prev == red || i == 23) {
-                day = getDay(i);
-                myObj[day]["endTime"] = i;
+            else if((prev == "#700000" || i == 23) && curr == "#dc3545") {
+                day = getDay(j);
+                tempObj["endTime"] = i; //not inclusive! 
+                myObj[day].push(tempObj);
             }
     }
     }
+    let myString = JSON.stringify(myObj);
 }
 
 function getDay(num) {
