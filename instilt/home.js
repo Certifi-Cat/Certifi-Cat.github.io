@@ -44,24 +44,34 @@ function redirectCreateEvent() {window.location.replace("https://certifi-cat.git
 function createEvent() {eventName = document.getElementById('inputName').valueeventData = document.getElementById('inputData').value
 }
 
-$(document).ready(function() {var $box = $('.time-box').mousedown(function() {    $(this).toggleClass('time-box-highlight');    var flag = $(this).hasClass('time-box-highlight')    $box.on('mouseenter.highlight', function() {        $(this).toggleClass('time-box-highlight', flag);    });});$(document).mouseup(function() {    $box.off('mouseenter.highlight')})
+$(document).ready(function() {
+    var $box = $('.time-box').mousedown(function() {    
+        $(this).toggleClass('time-box-highlight');    
+        var flag = $(this).hasClass('time-box-highlight');    
+                                                                                  
+        $box.on('mouseenter.highlight', function() {        
+            $(this).toggleClass('time-box-highlight', flag);    
+        });
+    });
+    $(document).mouseup(function() {    
+        $box.off('mouseenter.highlight')});
 });
 
 function submitTimes() {
     var na = document.getElementById("person-name").value
     let myObj = {name: na, Sunday: [], Monday: [], Tuesday: [], Wednesday: [], Thursday: [], Friday: [], Saturday: []};
     fetch('./availability.json').then(response => times = response.json())
-    var cols = document.getElementById('home-container-columns');
-    var day;
+    var cols = document.getElementsByClassName('home-container-columns');
+    var day, curr, prev;
     var tempObj = {startTime: null, endTime: null};
-    for(int j = 0; j < cols.length; j++) {
-        var divArray = cols.ChildNodes;
-        for(int i = 0; i < divArray.length; i++) {
+    for(var j = 0; j < cols.length; j++) {
+        var divArray = cols[j].getElementsByTagName('div');
+        for(var i = 0; i < divArray.length; i++) {
             curr = window.getComputedStyle(divArray[i]).getPropertyValue(‘background-color’);
             if(i > 0) {
                 prev = window.getComputedStyle(divArray[i-1]).getPropertyValue(‘background-color’);
             }
-            if(getComputedStyle(divArray[i]).getPropertyValue(background-color) == "#700000" && (prev == "#dc3545" || i == 0)) {
+            if(curr == "#700000" && (prev == "#dc3545" || i == 0)) {
                 tempObj["startTime"] = i; //inclusive
                 
             }
