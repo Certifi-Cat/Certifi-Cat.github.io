@@ -97,40 +97,17 @@ function getDay(num) {
 
 
 /* READ
-
-​
-
     sendData(data) takes in the *JSON object,
-
     and is sent to a google apps scripts project thats deployed as a web app via
-
     a post request with the JSON object in a text form in the body of the request
-
     The app scripts project is connected to a google sheet which takes in the JSON
-
     and formats it to the google sheet. 
-
-​
-
-   
-
-​
-
     An nonproduction copy of the google sheet is linked:
-
     https://docs.google.com/spreadsheets/d/1CP3PBlQuo9TESws-w-PZQgOlwf8OucYV3HLSwrebPsI/edit?usp=sharing
 
-​
-
         App scripts project is in the google sheet under extensions->App scripts
-
         Instructions for implementing a production copy of the sheet and app script 
-
         is laid out in the app script main file
-
-​
-
-​
 
     *JSON object in format of:
     name is string
