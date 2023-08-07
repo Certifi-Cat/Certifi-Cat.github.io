@@ -45,66 +45,82 @@ function createEvent() {eventName = document.getElementById('inputName').valueev
 }
 
 $(document).ready(function() {
-    var $box = $('.time-box').mousedown(function() {    
-        $(this).toggleClass('time-box-highlight');    
-        var flag = $(this).hasClass('time-box-highlight');    
-                                                                                  
-        $box.on('mouseenter.highlight', function() {        
-            $(this).toggleClass('time-box-highlight', flag);    
-        });
+  var $box = $('.time-box').mousedown(function() {
+    $(this).toggleClass('time-box-highlight');
+    var flag = $(this).hasClass('time-box-highlight');
+    $box.on('mouseenter.highlight', function() {
+      $(this).toggleClass('time-box-highlight', flag);
     });
-    $(document).mouseup(function() {    
-        $box.off('mouseenter.highlight')});
+  });
+  $(document).mouseup(function() {
+    $box.off('mouseenter.highlight')
+  });
 });
 
+console.log("is it consoling??")
+
 function submitTimes() {
-    var na = document.getElementById("person-name").value
-    let myObj = {name: na, Sunday: [], Monday: [], Tuesday: [], Wednesday: [], Thursday: [], Friday: [], Saturday: []};
-    fetch('./availability.json').then(response => times = response.json())
-    var cols = document.getElementsByClassName('home-container-columns');
-    var day, curr, prev;
-    var tempObj = {startTime: null, endTime: null};
-    for(var j = 0; j < cols.length; j++) {
-        var divArray = cols[j].getElementsByTagName('div');
-        for(var i = 0; i < divArray.length; i++) {
-            curr = window.getComputedStyle(divArray[i]).getPropertyValue(‘background-color’);
-            if(i > 0) {
-                prev = window.getComputedStyle(divArray[i-1]).getPropertyValue(‘background-color’);
-            }
-            if(curr == "#700000" && (prev == "#dc3545" || i == 0)) {
-                tempObj["startTime"] = i; //inclusive
-                
-            }
-            else if((prev == "#700000" || i == 23) && curr == "#dc3545") {
-                day = getDay(j);
-                tempObj["endTime"] = i; //not inclusive! kept for indexing purposes - may need to change
-                myObj[day].push(tempObj);
-            }
+  var na = document.getElementById("person-name").value
+  let myObj = {
+    name: na,
+    Sunday: [],
+    Monday: [],
+    Tuesday: [],
+    Wednesday: [],
+    Thursday: [],
+    Friday: [],
+    Saturday: []
+  };
+  fetch('./availability.json').then(response => times = response.json())
+  var cols = document.getElementsByClassName('home-container-columns');
+  var day, curr, prev;
+  var tempObj = {
+    startTime: null,
+    endTime: null
+  };
+  
+  for (var j = 0; j < cols.length; j++) {
+    var divArray = cols[j].getElementsByTagName('div');
+    for (var i = 0; i < divArray.length; i++) {
+      curr = window.getComputedStyle(divArray[i]).getPropertyValue('background-color');
+      if (i > 0) {
+        prev = window.getComputedStyle(divArray[i-1]).getPropertyValue('background-color');
+      }
+      if (curr == "rgb(112, 0, 0)" && (prev == "rgb(220, 53, 69)" || i == 0)) {
+        tempObj["startTime"] = i; //inclusive
+        console.log("well you've started")
+
+      } else if ((prev == "rgb(112, 0, 0)" || i == 23) && curr == "rgb(220, 53, 69)") {
+        day = getDay(j);
+        tempObj["endTime"] = i; //not inclusive! kept for indexing purposes - may need to change
+        myObj[day].push(tempObj);
+        console.log("and you've ended")
+      }
     }
-    }
-    let myString = JSON.stringify(myObj);
+  }
+  console.log("i am maybe sad")
+  console.log(myObj);
+  let myString = JSON.stringify(myObj);
 }
 
 function getDay(num) {
-    switch (num) {
-        case 0:
-            return 'Sunday';
-        case 1:
-            return 'Monday';
-        case 2:
-            return 'Tuesday';
-        case 3:
-            return 'Wednesday';
-        case 4:
-            return 'Thursday';
-        case 5:
-            return 'Friday';
-        case 6:
-            return 'Saturday';
-    }
+  switch (num) {
+    case 0:
+      return 'Sunday';
+    case 1:
+      return 'Monday';
+    case 2:
+      return 'Tuesday';
+    case 3:
+      return 'Wednesday';
+    case 4:
+      return 'Thursday';
+    case 5:
+      return 'Friday';
+    case 6:
+      return 'Saturday';
+  }
 }
-
-
 
 /* READ
     sendData(data) takes in the *JSON object,
