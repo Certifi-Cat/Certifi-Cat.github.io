@@ -30,7 +30,7 @@ const analytics = getAnalytics(app);
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-/* button functionality */
+/* button functionality: detects a click and performs an action based on that */
 if(document.getElementById('create') != null) {document.getElementById("create").addEventListener("click", redirectCreateEvent);
 }
 if(document.getElementById('submit') != null) {document.getElementById("submit").addEventListener("click", submitTimes);
@@ -38,12 +38,16 @@ if(document.getElementById('submit') != null) {document.getElementById("submit")
 if(document.getElementById('submitEvent') != null) {document.getElementById("submitEvent").addEventListener("click", createEvent);window.location.replace("https://certifi-cat.github.io/instilt/UNIQUE-EVENT-ID-HERE");
 }
 
-function redirectCreateEvent() {window.location.replace("https://certifi-cat.github.io/instilt/create.html");
+function redirectCreateEvent() {
+    window.location.replace("https://certifi-cat.github.io/instilt/create.html");
 }
 
-function createEvent() {eventName = document.getElementById('inputName').valueeventData = document.getElementById('inputData').value
+function createEvent() {
+    eventName = document.getElementById('event-name').value
+    //generate a link to THAT event's scheduling page?
 }
 
+/*allow highlighting of each time-slot */
 $(document).ready(function() {
   var $box = $('.time-box').mousedown(function() {
     $(this).toggleClass('time-box-highlight');
@@ -57,12 +61,13 @@ $(document).ready(function() {
   });
 });
 
-console.log("is it consoling??")
-
+/* when the button is pressed, submit the person's availability to a google app scripts project */
 function submitTimes() {
   var na = document.getElementById("person-name").value
+  var ev = document.getElementById("event-name").value || ""
   let myObj = {
     name: na,
+    event: ev,
     Sunday: [],
     Monday: [],
     Tuesday: [],
@@ -74,10 +79,7 @@ function submitTimes() {
   fetch('./availability.json').then(response => times = response.json())
   var cols = document.getElementsByClassName('home-container-columns');
   var day, curr, prev;
-  var tempObj = {
-    startTime: null,
-    endTime: null
-  };
+  var tempObjs = [];
   
   for (var j = 0; j < cols.length; j++) {
     var divArray = cols[j].getElementsByTagName('div');
@@ -86,21 +88,33 @@ function submitTimes() {
       if (i > 0) {
         prev = window.getComputedStyle(divArray[i-1]).getPropertyValue('background-color');
       }
-      if (curr == "rgb(112, 0, 0)" && (prev == "rgb(220, 53, 69)" || i == 0)) {
-        tempObj["startTime"] = i; //inclusive
-        console.log("well you've started")
+      if (curr == "rgb(90, 0, 0)" && (prev == "rgb(165, 29, 42)" || i == 0)) {
+      	var tempObj = {};
+        tempObj["start"] = milFormat(i); //inclusive
+        tempObjs.push(tempObj);
 
-      } else if ((prev == "rgb(112, 0, 0)" || i == 23) && curr == "rgb(220, 53, 69)") {
+      } else if ((prev == "rgb(90, 0, 0)" || i == 23) && curr == "rgb(165, 29, 42)") {
         day = getDay(j);
-        tempObj["endTime"] = i; //not inclusive! kept for indexing purposes - may need to change
+        var tempObj = tempObjs[tempObjs.length-1]
+        tempObj["end"] = milFormat(i); //not inclusive! kept for indexing purposes - may need to change
         myObj[day].push(tempObj);
-        console.log("and you've ended")
       }
     }
   }
-  console.log("i am maybe sad")
-  console.log(myObj);
-  let myString = JSON.stringify(myObj);
+  sendData(myObj);
+}
+
+function milFormat(num) {
+	num = num*100;
+  var numText = num.toString();
+  switch (numText.length) {
+  	case 1:
+    	return "000" + numText;
+    case 2: 
+    	return "00" + numText;
+    case 3: 
+    	return "0" + numText;
+  }
 }
 
 function getDay(num) {
