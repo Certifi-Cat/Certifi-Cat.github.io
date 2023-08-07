@@ -43,7 +43,7 @@ function redirectCreateEvent() {
 }
 
 function createEvent() {
-    eventName = document.getElementById('event-name').value
+    //eventName = document.getElementById('event-name').value
     //generate a link to THAT event's scheduling page?
 }
 
@@ -64,7 +64,8 @@ $(document).ready(function() {
 /* when the button is pressed, submit the person's availability to a google app scripts project */
 function submitTimes() {
   var na = document.getElementById("person-name").value
-  var ev = document.getElementById("event-name").value || ""
+  //var ev = document.getElementById("event-name").value || ""
+  var ev = "";
   let myObj = {
     name: na,
     event: ev,
