@@ -155,4 +155,6 @@
 #event-name {
 }
 
-#other-data-column
+#other-data-column {
+  margin-left: var(--dl-space-space-fourunits);
+}
