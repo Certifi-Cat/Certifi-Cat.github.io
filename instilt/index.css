@@ -18,7 +18,7 @@
   margin-top: var(--dl-space-space-oneandhalfunits);
   align-items: flex-start;
   padding-top: var(--dl-space-space-unit);
-  padding-left: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-sixunits);
   padding-right: var(--dl-space-space-unit);
   padding-bottom: var(--dl-space-space-unit);
   justify-content: center;
