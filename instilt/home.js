@@ -20,7 +20,6 @@ const firebaseConfig = {
     storageBucket: "testdatabase-648ea.appspot.com",
     messagingSenderId: $( secrets.FBmessagingSenderID ),
     appId: $( secrets.FBappID ),
-    databaseURL: "https://testdatabase-648ea-default-rtdb.firebaseio.com",
     measurementId: "G-HGS1508WKH"
 };
 
