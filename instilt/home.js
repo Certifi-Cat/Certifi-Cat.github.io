@@ -27,7 +27,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 /* button functionality: detects a click and performs an action based on that */
