@@ -63,6 +63,7 @@ $(document).ready(function() {
 
 /* when the button is pressed, submit the person's availability to a google app scripts project */
 function submitTimes() {
+  console.log("function is running!");
   var na = document.getElementById("person-name").value
   //var ev = document.getElementById("event-name").value || ""
   var ev = "";
