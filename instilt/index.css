@@ -78,7 +78,7 @@
   align-self: center;
   margin-top: var(--dl-space-space-twounits);
   align-items: flex-start;
-  justify-content: center;
+  justify-content: left;
 }
 .home-button {
   color: #fafafa;
