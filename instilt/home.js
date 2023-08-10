@@ -1,4 +1,3 @@
-import React from 'react'
 import Script from 'dangerous-html/react'
 import Component from './component'
 import projectStyles from '.style.module.css'
