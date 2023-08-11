@@ -1,7 +1,6 @@
-import Script from 'dangerous-html/react'
-import Component from './component'
-import projectStyles from '.style.module.css'
-import styles from './home.module.css'
+//import Component from './component'
+import projectStyles from '.style.css'
+import styles from './home.css'
 
 /* firebase */
 // Import the functions you need from the SDKs you need
