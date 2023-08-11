@@ -1,5 +1,5 @@
 //import Component from './component'
-import projectStyles from '.style.css'
+import projectStyles from './style.css'
 import styles from './home.css'
 
 /* firebase */
