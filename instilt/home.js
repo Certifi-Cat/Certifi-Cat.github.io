@@ -1,13 +1,13 @@
 //import Component from './component'
 import projectStyles from './style.css'
 import styles from './home.css'
-
-/* firebase */
-// Import the functions you need from the SDKs you need
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
 
+var script = document.createElement('script');
+document.getElementsByTagName('head')[0].appendChild(script);
+
+/* firebase */
 const firebaseConfig = {
     apiKey: $( secrets.FBKey ),
     authDomain: "testdatabase-648ea.firebaseapp.com",
