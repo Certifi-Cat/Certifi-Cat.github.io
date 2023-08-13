@@ -1,27 +1,25 @@
-import projectStyles from './instilt/style.css'
-import styles from './instilt/home.css'
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
-
 var script = document.createElement('script');
 document.getElementsByTagName('head')[0].appendChild(script);
 
-/* firebase */
-const firebaseConfig = {
-    apiKey: $( secrets.FBKey ),
-    authDomain: "testdatabase-648ea.firebaseapp.com",
-    databaseURL: "https://testdatabase-648ea-default-rtdb.firebaseio.com",
-    projectId: "testdatabase-648ea",
-    storageBucket: "testdatabase-648ea.appspot.com",
-    messagingSenderId: $( secrets.FBmessagingSenderID ),
-    appId: $( secrets.FBappID ),
-    measurementId: "G-HGS1508WKH"
-};
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+// import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const database = getDatabase(app);
+// /* firebase */
+// const firebaseConfig = {
+//     apiKey: $( secrets.FBKey ),
+//     authDomain: "testdatabase-648ea.firebaseapp.com",
+//     databaseURL: "https://testdatabase-648ea-default-rtdb.firebaseio.com",
+//     projectId: "testdatabase-648ea",
+//     storageBucket: "testdatabase-648ea.appspot.com",
+//     messagingSenderId: $( secrets.FBmessagingSenderID ),
+//     appId: $( secrets.FBappID ),
+//     measurementId: "G-HGS1508WKH"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+// const database = getDatabase(app);
 
 /* button functionality: detects a click and performs an action based on that */
 if(document.getElementById('create') != null) {document.getElementById("create").addEventListener("click", redirectCreateEvent);
@@ -115,19 +113,19 @@ function milFormat(num) {
 function getDay(num) {
   switch (num) {
     case 0:
-      return 'Sunday';
+      return 'sunday';
     case 1:
-      return 'Monday';
+      return 'monday';
     case 2:
-      return 'Tuesday';
+      return 'tuesday';
     case 3:
-      return 'Wednesday';
+      return 'wednesday';
     case 4:
-      return 'Thursday';
+      return 'thursday';
     case 5:
-      return 'Friday';
+      return 'friday';
     case 6:
-      return 'Saturday';
+      return 'saturday';
   }
 }
 
