@@ -57,10 +57,8 @@ function submitTimes() {
   console.log("function is running!");
   var na = document.getElementById("person-name").value
   //var ev = document.getElementById("event-name").value || ""
-  var ev = "";
   let myObj = {
     name: na,
-    event: ev,
     Sunday: [],
     Monday: [],
     Tuesday: [],
