@@ -67,11 +67,10 @@ function submitTimes() {
     Friday: [],
     Saturday: []
   };
-  fetch('./availability.json').then(response => times = response.json())
+
   var cols = document.getElementsByClassName('home-container-columns');
   var day, curr, prev;
   var tempObjs = [];
-  
   for (var j = 0; j < cols.length; j++) {
     var divArray = cols[j].getElementsByTagName('div');
     for (var i = 0; i < divArray.length; i++) {
