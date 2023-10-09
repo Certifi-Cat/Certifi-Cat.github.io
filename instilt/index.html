@@ -10,14 +10,14 @@
             data-tag="font" />
         <link rel="stylesheet" href="./style.css" type="text/css"/>
     </head>
-    <body onload="loadCarousel(0)">
+    <body>
         <h1>Gallery</h1>
         <button id="carouselBack" onclick="moveSlide(-1)"> &lt;</button>
         <button id="carouselForward" onclick="moveSlide(1)"> &gt;</button>
-        <div class="carouselBox">
-            <div class="carousel"> <img class="carouselImage" id="carouselCenter" src="./One.png"> </img> </div>                <!--On hover, create a div here that spans the entire width of the container, this div is a caption-->
-            <div class="carousel"> <img class="carouselImage" id="carouselLeft" src="./Two.png"> </img> </div>                <!--On hover, create a div here that spans the entire width of the container, this div is a caption-->
-            <div class="carousel"> <img class="carouselImage" id="carouselRight" src="./One.png"> </img> </div>                <!--On hover, create a div here that spans the entire width of the container, this div is a caption-->
+        <div class="carouselBox" class="galleryText">
+            <div class="carousel"> <img class="carouselImage" id="carouselCenter" src="./graphics/One.png"> </img> </div>                <!--On hover, create a div here that spans the entire width of the container, this div is a caption-->
+            <div class="carousel"> <img class="carouselImage" id="carouselLeft" src="./graphics/Two.png"> </img> </div>                <!--On hover, create a div here that spans the entire width of the container, this div is a caption-->
+            <div class="carousel"> <img class="carouselImage" id="carouselRight" src="./graphics/One.png"> </img> </div>                <!--On hover, create a div here that spans the entire width of the container, this div is a caption-->
         </div>
         </div>
         <script src="script.js"></script>
