@@ -2,6 +2,7 @@ var script = document.createElement('script');
 document.getElementsByTagName('head')[0].append(script);
 
 var images = document.getElementsByClassName("carouselImage"); /* Can swap out hardcoded images for a GET request */
+var curr = 0;
 
 function moveSlide(choice) {
     for(i = 0; i < images.length; i++) {
