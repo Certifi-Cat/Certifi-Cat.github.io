@@ -1,42 +1,45 @@
 var script = document.createElement('script');
 document.getElementsByTagName('head')[0].append(script);
 
-var images = document.getElementsByClassName("carousel");
-function loadCarousel(position) {
-    images[position].setAttribute('id', "carouselCenter");
-    images[position].classList.remove("carouselHidden");
-}
+var images = document.getElementsByClassName("carouselImage"); /* Can swap out hardcoded images for a GET request */
 
 function moveSlide(choice) {
-    var curr = -2;
     for(i = 0; i < images.length; i++) {
-        if(images[i].hasAttribute("carouselCenter")) {
+        if(images[i].getAttribute("id") === "carouselCenter") {
             curr = i;
-            console.log("attributes: " + images[i].hasAttribute);
+            console.log("attributes yay");
         }
     }
     curr += choice;
-    console.log("I'm here with curr as " + curr);
-    if(curr == -1) {
-        curr = images.length - 1;
-    }
-    else if(curr == images.length) {
-        curr = 0;
-    }
+    curr = Math.abs(curr % images.length);
+    left = curr - 1 < 0 ? images.length + curr - 1 : (curr - 1) % images.length;
+    right = curr + 1 < 0 ? images.length + curr + 1 : (curr + 1) % images.length;
 
     for(i = 0; i < images.length; i++) {
         if(i == curr) {
             images[i].setAttribute('id', "carouselCenter");
-            images[i].classList.remove("carouselHidden");
         }
-        else if(i == curr - 1) {
+        else if(i == left) {
             images[i].setAttribute('id', "carouselLeft");
-            images[i].classList.remove("carouselHidden");
         }
-        else if(i == curr + 1) {
+        else if(i == right) {
             images[i].setAttribute('id', "carouselRight");
-            images[i].classList.remove("carouselHidden");
         }
-        else images[i].classList.add("carouselHidden");
+        else {
+            images[i].setAttribute('id', "carouselHidden");
+        }
     }
 }
+
+var text = [
+    {
+        "imageName": "One.png", 
+        "imageDescription": "This is the description of the first image"
+    }, 
+    {
+        "imageName": "Two.png", 
+        "imageDescription": "And here's the description of the second image"
+    }]
+document.getElementById('carouselCenter').addEventListener('hover', function showText() {
+    
+});
